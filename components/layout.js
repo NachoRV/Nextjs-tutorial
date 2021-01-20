@@ -7,7 +7,7 @@ import Nav from '../components/nav'
 
 const name = 'IRVB'
 
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Home'
 
 export default function Layout({ children, home }) {
   return (
@@ -31,7 +31,7 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <img
-              src="/images/profile.jpg"
+              src="/images/profile.png"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />

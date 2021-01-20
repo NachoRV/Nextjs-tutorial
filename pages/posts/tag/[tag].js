@@ -6,11 +6,11 @@ import Link from "next/link";
 import Date from "../../../components/date";
 
 
-export default function PostTags({ allPostsData }) {
+export default function PostTags({ allPostsData, tag }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{ tag }</title>
       </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
@@ -52,6 +52,7 @@ export async function getStaticProps({ params }) {
   const allPostsData = getSortedPostsData(params.tag);
   return {
     props: {
+      tag: params.tag,
       allPostsData,
     },
   };
