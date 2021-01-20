@@ -2,8 +2,11 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Nav from '../components/nav'
+
 
 const name = 'IRVB'
+
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
@@ -52,6 +55,7 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
+        <Nav></Nav>
       </header>
       <main>{children}</main>
       {!home && (

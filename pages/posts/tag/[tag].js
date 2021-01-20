@@ -1,40 +1,18 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
+import Layout, { siteTitle } from "../../../components/layout";
+import utilStyles from "../../../styles/utils.module.css";
+import { getSortedPostsData, getAllPostTags } from "../../../lib/posts";
 import Link from "next/link";
-import Date from "../components/date";
+import Date from "../../../components/date";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
 
-/*
-
-    export async function getSortedPostsData() {
-      // Instead of the file system,
-      // fetch post data from an external API endpoint
-      const res = await fetch('..')
-      return res.json()
-    }
-
-*/
-const tag = 'SSR'
-export default function Home({ allPostsData }) {
+export default function PostTags({ allPostsData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-      <Link href={`/posts/tag/${tag}`}>
-                <a>{tag}</a>
-      </Link>
         <p>[Your Self Introduction]</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{" "}
@@ -60,4 +38,21 @@ export default function Home({ allPostsData }) {
       </section>
     </Layout>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = getAllPostTags()
+  return {
+    paths,
+    fallback: false
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const allPostsData = getSortedPostsData(params.tag);
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }
