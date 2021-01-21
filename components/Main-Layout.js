@@ -8,7 +8,7 @@ import Nav from './nav/nav'
 const name = 'IRVB'
 export const siteTitle = 'Home'
 
-export default function Layout({ children, home }) {
+export default function MainLayout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>

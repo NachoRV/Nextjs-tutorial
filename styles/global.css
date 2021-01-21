@@ -1,3 +1,12 @@
+root {
+  --grey: #C9DAEA;
+  --blue: #03F7EB;
+  --green: #00B295;
+  --black: #191516;
+  --purple: #AB2346;
+  --white: #f1f1f1;
+}
+
 html,
 body {
   padding: 0;
