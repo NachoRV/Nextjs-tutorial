@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+.logo > span {
+  font-family: monospace;
+  font-size: 2rem;
+  padding: 0 .6rem;
+  background-color: var(--black);
+  color: var(--white);
+  max-width: 190px;
+}
+.logo > span:nth-child(1){
+  max-width: 80px;
+  margin-bottom: 1px;
+  transform: rotate(-6deg);
+}
+
+
+@media (min-width: 600px) {
+
+}
