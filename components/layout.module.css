@@ -5,6 +5,7 @@
   min-height: 95vh;
   padding: 0.5rem 1rem;
   margin: 2rem auto;
+  overflow-x: auto;
 }
 
 .header {
