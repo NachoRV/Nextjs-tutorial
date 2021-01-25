@@ -72,3 +72,7 @@
   align-items: center;
   width: 100%;
 }
+
+pre {
+  overflow-x: auto;
+}
