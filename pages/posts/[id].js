@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 
 export default function Post({ postData }) {
-  return (
+  return (<>
     <MainLayout>
       <Head>
         <title>{postData.title}</title>
@@ -32,6 +32,13 @@ export default function Post({ postData }) {
         <div className={utilStyles.article} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </MainLayout>
+    <style jsx>{`
+          pre {
+            overflow: auto;
+          }
+    `}
+    </style>
+    </>
   )
 }
 
