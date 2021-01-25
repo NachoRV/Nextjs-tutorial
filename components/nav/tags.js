@@ -5,10 +5,10 @@ export default [
   },
   {
     name: 'Otros',
-    path: 'otros'
+    path: 'Otros'
   },
   {
     name: 'Docker',
-    path: 'docker'
+    path: 'Docker'
   }
 ]
