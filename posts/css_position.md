@@ -8,7 +8,7 @@ author:
   name: Nacho
   bio: Para que nos conozcamos un poco mejor ... 
   img: /yo.jpg
-tags: "CSS"
+tag: "CSS"
 date: '2020-01-02'
 ---
 

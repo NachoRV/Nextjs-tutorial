@@ -18,8 +18,8 @@ export default function Post({ postData }) {
        <Image
         src={postData.img}
         alt="picture"
-        width={500}
-        height="auto"
+        width={700}
+        height={300}
       />
        </div>
         <h1 className={utilStyles.headingL}>{postData.title}</h1>
