@@ -3,6 +3,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Nav from './nav/nav'
+import Footer from './footer'
 import Header from'./header'
 
 
@@ -36,6 +37,7 @@ export default function MainLayout({ children, home }) {
           </Link>
         </div>
       )}
+      <Footer></Footer>
     </div>
   )
 }

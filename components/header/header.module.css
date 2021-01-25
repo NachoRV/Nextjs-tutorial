@@ -12,6 +12,7 @@
 .logo {
   display: flex;
   flex-direction: column;
+  font-size: 2.2rem;
 }
 .logo > span {
   font-family: monospace;
