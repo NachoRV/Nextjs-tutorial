@@ -4,7 +4,11 @@ export default [
     path: 'CSS'
   },
   {
-    name: 'SSR',
-    path: 'SSR'
+    name: 'Otros',
+    path: 'otros'
+  },
+  {
+    name: 'Docker',
+    path: 'docker'
   }
 ]
