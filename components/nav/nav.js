@@ -18,10 +18,11 @@ export default function Nav() {
             display: flex;
             flex-direction: row-reverse;
             width: 100%;
+            margin-top: 25px
           }
           .nav > a {
             font-family: monospace;
-            margin-left:5px;
+            margin-left: 15px;
             color: var(--black)
           }
           `
