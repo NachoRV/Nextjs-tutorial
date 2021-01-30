@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
@@ -6,11 +7,11 @@ import Nav from './nav/nav'
 import Footer from './footer'
 import Header from'./header'
 
-
 const name = 'IRVB'
 export const siteTitle = 'Home'
 
 export default function MainLayout({ children, home }) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,6 +20,7 @@ export default function MainLayout({ children, home }) {
           name="description"
           content="Learn how to build a personal website using Next.js"
         />
+        
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(
@@ -27,6 +29,7 @@ export default function MainLayout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/default.min.css"></link>
       </Head>
       <Header></Header>
       <main>{children}</main>

@@ -16,8 +16,8 @@ export default function Header() {
       <Link href={`/`}>
         <a>
           <div className={styles.logo}>
-            <span>{title}</span>
-            <span>{subTitle}</span>
+            <span>{title}<span className={styles.maquinaTitle}>&#160;</span></span>
+            <span>{subTitle}<span className={styles.maquinaSubtitle}>&#160;</span></span>
           </div>
         </a>
       </Link>
