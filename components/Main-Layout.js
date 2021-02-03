@@ -6,13 +6,13 @@ import Link from 'next/link'
 import Nav from './nav/nav'
 import Footer from './footer'
 import Header from'./header'
-import Prism from "Prismjs";
+import Prism from "prismjs";
 
 const name = 'IRVB'
 export const siteTitle = 'Home'
 
 export default function MainLayout({ children, home }) {
-  
+
   useEffect(() => {
     Prism.highlightAll();
   }, []);
