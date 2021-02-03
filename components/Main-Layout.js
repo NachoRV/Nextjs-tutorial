@@ -6,11 +6,16 @@ import Link from 'next/link'
 import Nav from './nav/nav'
 import Footer from './footer'
 import Header from'./header'
+import Prism from "Prismjs";
 
 const name = 'IRVB'
 export const siteTitle = 'Home'
 
 export default function MainLayout({ children, home }) {
+  
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -29,7 +34,7 @@ export default function MainLayout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/default.min.css"></link>
+        <link href="../public/prism.ccs" rel="stylesheet" />
       </Head>
       <Header></Header>
       <main>{children}</main>
@@ -41,6 +46,7 @@ export default function MainLayout({ children, home }) {
         </div>
       )}
       <Footer></Footer>
+      <script src="../public/prism.js"></script>
     </div>
   )
 }

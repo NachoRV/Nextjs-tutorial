@@ -35,14 +35,14 @@ docker run -d -p 81:80 --name "nombre-imagen" nombre-image:4.3.0
 Con este comando crearemos el contenedor y lo pondremos en marcha el flag -d es para ponerlo en background con -p le indicamos el mapeo de puertos y con --name le asignamos un nombre, por ultimo le decimos que imagen tiene que usar.
 
 
-### Listar contenedore
+### Listar contenedores
 
 ```sh
 docker ps -a
 
 ```
 
-docker ps lista los contenedores que estrian corriendo en ese momento, añadiendo el flaf -a se mostrar tambien los contrenedores parados.
+docker ps lista los contenedores que estrian corriendo en ese momento, añadiendo el flaf -a se mostrar también los contenedores parados.
 ### Listar imágenes
 
 ```sh
@@ -54,7 +54,7 @@ Mismo funcionamiento que para listar contenedores
 ### Parar contenedor 
 
 ```sh
-docker stop <contgenedor>
+docker stop <contenedor>
 ```
 
 Puedes usar tanto el id del contenedor como el tag.
@@ -65,7 +65,7 @@ Puedes usar tanto el id del contenedor como el tag.
 docker rm <contenedor>
 ```
 
-### Borrar imagenes 
+### Borrar imágenes 
 ```sh
 docker rmi <imagen>
 ```
@@ -75,20 +75,12 @@ docker rmi <imagen>
 ```sh
 docker save <contenedor> | gzip > <contenedor>.tar.gz
 docker save -o <contenedor>.tar <contenedor>
-
 ```
-Al realizar la exportacion tenemos dos opciones la primera seria para exportarlo comprimido en gz tienes que estar en entorno linux o usar la sonsola de git en Windows con la segunda opcion realizarimos una exportacion en tar sin comprimir.
+Al realizar la exportación tenemos dos opciones la primera seria para exportarlo comprimido en gz tienes que estar en entorno linux o usar la consola de git en Windows con la segunda opción realizaríamos una exportación en tar sin comprimir.
 
 Como he comentado estos son solo los comando docker que yo mas uso en mi día a día y que espero te sirvan como un pequeño resumen de su uso mas basico, recuerda que añadiendo el flag --help podras ampliar informacion sobre las distintas opciones de cada comando, por ejemplo:
 
 ```sh
 docker run --help
 ```
-
-<pre><code className="js">
-{`fetch('{url}')
-    .then(response => console.log(response));
-`}
-</code></pre>
-
 Espero que esta entrada haya sido de tú interest y si te ha gustado no olvides compartir. 
