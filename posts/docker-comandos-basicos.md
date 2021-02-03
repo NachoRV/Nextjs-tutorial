@@ -42,7 +42,7 @@ docker ps -a
 
 ```
 
-docker ps lista los contenedores que estrian corriendo en ese momento, añadiendo el flaf -a se mostrar también los contenedores parados.
+docker ps lista los contenedores que estrían corriendo en ese momento, añadiendo el flaf -a se mostrar también los contenedores parados.
 ### Listar imágenes
 
 ```sh
@@ -78,7 +78,7 @@ docker save -o <contenedor>.tar <contenedor>
 ```
 Al realizar la exportación tenemos dos opciones la primera seria para exportarlo comprimido en gz tienes que estar en entorno linux o usar la consola de git en Windows con la segunda opción realizaríamos una exportación en tar sin comprimir.
 
-Como he comentado estos son solo los comando docker que yo mas uso en mi día a día y que espero te sirvan como un pequeño resumen de su uso mas basico, recuerda que añadiendo el flag --help podras ampliar informacion sobre las distintas opciones de cada comando, por ejemplo:
+Como he comentado estos son solo los comando docker que yo mas uso en mi día a día y que espero te sirvan como un pequeño resumen de su uso mas básico, recuerda que añadiendo el flag --help podrás ampliar información sobre las distintas opciones de cada comando, por ejemplo:
 
 ```sh
 docker run --help
