@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
@@ -6,16 +6,29 @@ import Link from 'next/link'
 import Nav from './nav/nav'
 import Footer from './footer'
 import Header from'./header'
-import Prism from "prismjs";
+import Prism from "prismjs"
+import Cookies from './cookies'
 
 const name = 'IRVB'
 export const siteTitle = 'Home'
+const newCookie = 'CONSENT=Yes'
 
 export default function MainLayout({ children, home }) {
 
+  const [cookie, setCookie ] = useState(false)
+  const setNewCookie = () => {
+    setCookie(true)
+    document.cookie = newCookie
+  }
+
   useEffect(() => {
     Prism.highlightAll();
+    const cookies = document.cookie
+    const arrayCookies = cookies.replace(/ /g, "").split(";");
+    setCookie(arrayCookies.includes(newCookie));
+
   }, []);
+
 
   return (
     <div className={styles.container}>
@@ -45,6 +58,10 @@ export default function MainLayout({ children, home }) {
         </div>
       )}
       <Footer></Footer>
+      { 
+      !cookie && (
+         <Cookies setNewCookie={setNewCookie}></Cookies>
+      )}
     </div>
   )
 }
