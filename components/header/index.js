@@ -1,33 +1,34 @@
-import styles from './header.module.css'
-import Link from 'next/link'
-import Nav from '../nav/nav';
-import Menu from '../svg-icons/menu'
-import { useState } from 'react';
+import styles from "./header.module.css";
+import Link from "next/link";
+import Nav from "../nav/nav";
+import Menu from "../svg-icons/menu";
+import { useState } from "react";
 
-const title = 'IRVB'
-const subTitle = 'FrontEnd Developer'
-
+const title = "IRVB";
+const subTitle = "FrontEnd Developer";
 
 export default function Header() {
-  const [ stateMenu, setStateMenu ] = useState(false)
+  const [stateMenu, setStateMenu] = useState(false);
   return (
     <header className={styles.header}>
       <div className={styles.nav}>
-      <Link href={`/`}>
-        <a>
-          <div className={styles.logo}>
-            <span>{title}<span className={styles.maquinaTitle}>&#160;</span></span>
-            <span>{subTitle}<span className={styles.maquinaSubtitle}>&#160;</span></span>
-          </div>
-        </a>
-      </Link>
-      <Menu onClick={ ()=> setStateMenu(!stateMenu)}></Menu>
+        <Link href={`/`}>
+          <a>
+            <div className={styles.logo}>
+              <span>
+                {title}
+                <span className={styles.maquinaTitle}>&#160;</span>
+              </span>
+              <span>
+                {subTitle}
+                <span className={styles.maquinaSubtitle}>&#160;</span>
+              </span>
+            </div>
+          </a>
+        </Link>
+        <Menu onClick={() => setStateMenu(!stateMenu)}></Menu>
       </div>
-      {
-        stateMenu && <Nav></Nav>
-      }
-      
-
+      {stateMenu && <Nav className={styles.navItems} />}
     </header>
-  )
+  );
 }

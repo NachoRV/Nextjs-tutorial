@@ -8,6 +8,10 @@
   align-items: baseline;
   font-size: 1.5rem;
 }
+
+.footer p {
+  display: flex;
+}
 .link {
   margin: 0 0px 0 5px;
 }

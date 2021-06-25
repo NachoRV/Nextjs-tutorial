@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 100%;
 }
-.nav{
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -29,7 +29,7 @@
   transform: rotate(-6deg);
 }
 .logo > span:nth-child(2){
-  max-width: 200px;
+  max-width: 220px;
   margin-bottom: 1px;
 }
 .maquinaTitle {
